@@ -1,0 +1,162 @@
+/* General styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: hwb(0 93% 7%);
+    margin: 0;
+    padding: 0;
+    opacity: 0; /* Start hidden for fade-in effect */
+    animation: fadeIn 1s forwards; /* Animation for page load */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(90deg, #ff758c, #ff7eb3);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+/* Section Headers */
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #444;
+    border-bottom: 2px solid #ff7eb3;
+    padding-bottom: 10px;
+}
+
+/* Form Styles */
+form {
+    margin-bottom: 20px;
+}
+
+.input-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.input-group {
+    flex: 1 1 calc(20% - 10px);
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-group input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styles */
+button.btn {
+    background-color: #ff7eb3;
+    color: white;
+    padding: 8px 15px; /* Smaller button size */
+    font-size: 0.9rem; /* Smaller font size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    align-self: flex-start; /* Align button with input fields */
+    margin-top: 35px; /* Move buttons down by 10 pixels */
+}
+
+button.btn:hover {
+    background-color: #f53f7c;
+    transform: translateY(-3px);
+}
+
+/* Display Expenses Section */
+.expense-display {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.expense-display.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.expense-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.expense-item:hover {
+    transform: scale(1.02);
+}
+
+.expense-item p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.total-expense h3 {
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .input-group {
+        flex: 1 1 calc(45% - 10px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .input-group {
+        flex: 1 1 calc(20% - 10px);
+    }
+}
+
+/* Footer Styles */
+footer {
+    text-align: center; /* Center text */
+    margin-top: 20px; /* Optional: space above the footer */
+}
